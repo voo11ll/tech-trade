@@ -7,7 +7,7 @@ const cors = require("cors");
 
 app.use(cors({
   // origin: ['http://localhost:3000',],
-  origin: ['https://tech-trade.vercel.app/',],
+  origin: ['https://tech-trade.vercel.app',],
   credentials: true
 }));
 
