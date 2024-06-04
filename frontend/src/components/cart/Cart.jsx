@@ -37,7 +37,7 @@ const Cart = ({ setOpenCart }) => {
                 onClick={() => setOpenCart(false)}
               />
             </div>
-            <h5>Cart Items is empty!</h5>
+            <h5>Корзина товаров пуста!</h5>
           </div>
         ) : (
           <>

@@ -137,7 +137,7 @@ const Trade = () => {
             onClick={() => toggleTab(4)}
           >
             <span className="text-lg font-medium text-gray-900">
-              How do I contact customer support?
+            Как мне связаться со службой поддержки ?
             </span>
             {activeTab === 4 ? (
               <svg
@@ -172,15 +172,15 @@ const Trade = () => {
           {activeTab === 4 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                You can contact our customer support team by emailing us at
-                support@myecommercestore.com, or by calling us at (555) 123-4567
-                between the hours of 9am and 5pm EST, Monday through Friday.
+              Вы можете связаться с нашей службой поддержки, отправив нам электронное сообщение по адресу
+              techtradeoffers@gmail.com или позвонив по телефону +7 (978) 336-29-79
+                с 9 утра до 20 вечера по мск времени, с понедельника по пятницу.
               </p>
             </div>
           )}
         </div>
 
-        <div className="border-b border-gray-200 pb-4">
+        {/* <div className="border-b border-gray-200 pb-4">
           <button
             className="flex items-center justify-between w-full"
             onClick={() => toggleTab(5)}
@@ -228,9 +228,9 @@ const Trade = () => {
               </p>
             </div>
           )}
-        </div>
+        </div> */}
 
-        <div className="border-b border-gray-200 pb-4">
+        {/* <div className="border-b border-gray-200 pb-4">
           <button
             className="flex items-center justify-between w-full"
             onClick={() => toggleTab(6)}
@@ -323,7 +323,7 @@ const Trade = () => {
               </p>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
