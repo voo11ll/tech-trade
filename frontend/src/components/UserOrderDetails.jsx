@@ -227,7 +227,7 @@ const UserOrderDetails = () => {
             data?.status === "Delivered" && (
               <div className={`${styles.button} text-white`}
               onClick={refundHandler}
-              >Give a Refund</div>
+              ></div>
             )
            }
         </div>

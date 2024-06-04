@@ -97,7 +97,7 @@ const CartSingle = ({ data, quantityChangeHandler, removeFromCartHandler }) => {
 
   const increment = (data) => {
     if (data.stock < value) {
-      toast.error("Product stock limited!");
+      toast.error("Запас продукции ограничен!");
     } else {
       setValue(value + 1);
       const updateCartData = { ...data, qty: value + 1 };

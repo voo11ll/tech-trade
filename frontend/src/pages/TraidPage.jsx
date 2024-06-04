@@ -221,10 +221,10 @@ const Trade = () => {
           {activeTab === 5 && (
             <div className="mt-4">
               <p className="text-base text-gray-500">
-                Unfortunately, once an order has been placed, we are not able to
-                make changes or cancellations. If you no longer want the items
-                you've ordered, you can return them for a refund within 30 days
-                of delivery.
+              К сожалению, после размещения заказа мы не можем
+              вносить изменения или отменять его. Если вам больше не нужны эти предметы
+              вы сделали заказ, вы можете вернуть его для возврата денег в течение 14 дней
+              о доставке.
               </p>
             </div>
           )}

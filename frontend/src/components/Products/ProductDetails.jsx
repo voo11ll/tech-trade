@@ -61,14 +61,14 @@ const ProductDetails = ({ data }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("Товар уже в корзине!");
     } else {
       if (data.stock < 1) {
-        toast.error("Product stock limited!");
+        toast.error("Запас продукции ограничен!");
       } else {
         const cartData = { ...data, qty: count };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Товар успешно добавлен в корзину!");
       }
     }
   };
@@ -108,7 +108,7 @@ const ProductDetails = ({ data }) => {
           toast.error(error.response.data.message);
         });
     } else {
-      toast.error("Please login to create a conversation");
+      toast.error("Пожалуйста, войдите в систему, чтобы создать беседу");
     }
   };
 
@@ -183,7 +183,7 @@ const ProductDetails = ({ data }) => {
                         className="cursor-pointer"
                         onClick={() => removeFromWishlistHandler(data)}
                         color={click ? "red" : "#333"}
-                        title="Remove from wishlist"
+                        title="Удалить из списка желаний"
                       />
                     ) : (
                       <AiOutlineHeart
@@ -191,7 +191,7 @@ const ProductDetails = ({ data }) => {
                         className="cursor-pointer"
                         onClick={() => addToWishlistHandler(data)}
                         color={click ? "red" : "#333"}
-                        title="Add to wishlist"
+                        title="Добавить в список желаний"
                       />
                     )}
                   </div>
@@ -200,7 +200,7 @@ const ProductDetails = ({ data }) => {
                   className={`${styles.button} !mt-6 !rounded !h-11 flex items-center`}
                   onClick={() => addToCartHandler(data._id)}
                 >
-                  <span className="text-white flex items-center">
+                  <span className="text-black flex items-center">
                     Добавить <AiOutlineShoppingCart className="ml-1" />
                   </span>
                 </div>
@@ -219,7 +219,7 @@ const ProductDetails = ({ data }) => {
                       </h3>
                     </Link>
                     <h5 className="pb-3 text-[15px]">
-                      ({averageRating}/5) Ratings
+                      ({averageRating}/5) Рейтинги
                     </h5>
                   </div>
                   <div

@@ -39,14 +39,14 @@ const ProductDetailsCard = ({ setOpen, data }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("Товар уже в корзине!");
     } else {
       if (data.stock < count) {
-        toast.error("Product stock limited!");
+        toast.error("Запас продукции ограничен!");
       } else {
         const cartData = { ...data, qty: count };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Товар успешно добавлен в корзину!");
       }
     }
   };
@@ -147,14 +147,14 @@ const ProductDetailsCard = ({ setOpen, data }) => {
                         className="cursor-pointer"
                         onClick={() => removeFromWishlistHandler(data)}
                         color={click ? "red" : "#333"}
-                        title="Remove from wishlist"
+                        title="Удалить из списка желаний"
                       />
                     ) : (
                       <AiOutlineHeart
                         size={30}
                         className="cursor-pointer"
                         onClick={() => addToWishlistHandler(data)}
-                        title="Add to wishlist"
+                        title="Добавить в список желаний"
                       />
                     )}
                   </div>
@@ -163,7 +163,7 @@ const ProductDetailsCard = ({ setOpen, data }) => {
                   className={`${styles.button} mt-6 rounded-[4px] h-11 flex items-center`}
                   onClick={() => addToCartHandler(data._id)}
                 >
-                  <span className="text-[#fff] flex items-center">
+                  <span className="text-[#000000] flex items-center">
                     Добавить <AiOutlineShoppingCart className="ml-1" />
                   </span>
                 </div>

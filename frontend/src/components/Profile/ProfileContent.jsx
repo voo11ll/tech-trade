@@ -562,7 +562,7 @@ const Address = () => {
     e.preventDefault();
 
     if (addressType === "" || country === "" || city === "") {
-      toast.error("Please fill all the fields!");
+      toast.error("Пожалуйста, заполните все поля!");
     } else {
       dispatch(
         updatUserAddress(
