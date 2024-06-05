@@ -6,9 +6,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  // origin: ['https://web-tech-trade-2.onrender.com',],
+  origin: ['https://tech-trade-dlu8.vercel.app/',],
   // origin: ['http://localhost:3000',],
-  origin: ['https://tech-trade.vercel.app/',],
+  // origin: ['https://tech-trade.vercel.app/',],
   credentials: true
 }));
 
