@@ -37,14 +37,14 @@ const ProductCard = ({ data, isEvent }) => {
   const addToCartHandler = (id) => {
     const isItemExists = cart && cart.find((i) => i._id === id);
     if (isItemExists) {
-      toast.error("Item already in cart!");
+      toast.error("Товар уже в корзине!");
     } else {
       if (data.stock < 1) {
-        toast.error("Product stock limited!");
+        toast.error("Запас продукции ограничен!");
       } else {
         const cartData = { ...data, qty: 1 };
         dispatch(addTocart(cartData));
-        toast.success("Item added to cart successfully!");
+        toast.success("Товар успешно добавлен в корзину!");
       }
     }
   };
@@ -81,7 +81,7 @@ const ProductCard = ({ data, isEvent }) => {
             className="cursor-pointer absolute right-2 top-5"
             onClick={() => removeFromWishlistHandler(data)}
             color={click ? "red" : "#333"}
-            title="Remove from wishlist"
+            title="Удалить из списка желаний"
           />
         ) : (
           <AiOutlineHeart
@@ -89,7 +89,7 @@ const ProductCard = ({ data, isEvent }) => {
             className="cursor-pointer absolute right-2 top-5"
             onClick={() => addToWishlistHandler(data)}
             color={click ? "red" : "#333"}
-            title="Add to wishlist"
+            title="Добавить в список желаний"
           />
         )}
         <AiOutlineEye
@@ -97,7 +97,7 @@ const ProductCard = ({ data, isEvent }) => {
           className="cursor-pointer absolute right-2 top-14"
           onClick={() => setOpen(!open)}
           color="#333"
-          title="Quick view"
+          title="Быстрый просмотр"
         />
         <AiOutlineShoppingCart
           size={25}

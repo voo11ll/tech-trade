@@ -49,7 +49,7 @@ const ShopLogin = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-700"
               >
-                Email address
+                Электронная почта
               </label>
               <div className="mt-1">
                 <input

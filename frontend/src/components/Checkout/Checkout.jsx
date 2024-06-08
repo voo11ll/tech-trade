@@ -28,7 +28,7 @@ const Checkout = () => {
 
   const paymentSubmit = () => {
    if(address1 === "" || address2 === "" || zipCode === null || country === "" || city === ""){
-      toast.error("Please choose your delivery address!")
+      toast.error("Пожалуйста, выберите свой адрес доставки!")
    } else{
     const shippingAddress = {
       address1,
@@ -74,7 +74,7 @@ const Checkout = () => {
           cart && cart.filter((item) => item.shopId === shopId);
 
         if (isCouponValid.length === 0) {
-          toast.error("Coupon code is not valid for this shop");
+          toast.error("Код купона недействителен для данного магазина");
           setCouponCode("");
         } else {
           const eligiblePrice = isCouponValid.reduce(
@@ -88,7 +88,7 @@ const Checkout = () => {
         }
       }
       if (res.data.couponCode === null) {
-        toast.error("Coupon code doesn't exists!");
+        toast.error("Кода купона не существует!");
         setCouponCode("");
       }
     });

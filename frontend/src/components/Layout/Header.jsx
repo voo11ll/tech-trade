@@ -45,7 +45,7 @@ const Header = ({ activeHeading }) => {
   };
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 70) {
+    if (window.scrollY < 5) {
       setActive(true);
     } else {
       setActive(false);

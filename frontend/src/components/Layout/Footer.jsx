@@ -53,11 +53,13 @@ const Footer = () => {
             <a href="https://t.me/techtradestore" target="_blank" rel="noopener noreferrer">
         <FaTelegramPlane size={25} style={{ marginLeft: "15px", cursor: "pointer" }} />
         </a>
-            <FaWhatsapp size={25} style={{ marginLeft: "15px", cursor: "pointer" }} />
+        <a href="https://wa.me/79783362979" target="_blank" rel="noopener noreferrer">
+       <FaWhatsapp size={25} style={{ marginLeft: "15px", cursor: "pointer" }} />
+       </a>
           </div>
         </ul>
 
-        <ul className="text-center sm:text-start">
+        {/* <ul className="text-center sm:text-start">
           <h1 className="mb-1 font-semibold">Company</h1>
           {footerProductLinks.map((link,index) => (
             <li key={index}>
@@ -100,7 +102,7 @@ const Footer = () => {
               </Link>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
 
       <div
