@@ -30,6 +30,72 @@ const Trade = () => {
       <div className="mx-auto space-y-4">
         {/* single Trade */}
 
+        
+        <div className="border-b border-gray-200 pb-4">
+  <button
+    className="flex items-center justify-between w-full"
+    onClick={() => toggleTab(7)}
+  >
+    <span className="text-lg font-medium text-gray-900">
+      Онлайн заявка на трейд-ин в интернет-магазине TechTrade ?
+    </span>
+    {activeTab === 7 ? (
+      <svg
+        className="h-6 w-6 text-gray-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    ) : (
+      <svg
+        className="h-6 w-6 text-gray-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    )}
+  </button>
+  {activeTab === 7 && (
+    <div className="mt-4">
+      <p className="text-base text-gray-500">
+        Заполните форму, чтобы оформить заявку на обмен вашего старого устройства Apple на новое:
+      </p>
+      <p className="text-base text-gray-500">
+        Ваше имя:<br />
+        Номер телефона:<br />
+        Email:<br />
+        Модель устройства:<br />
+        Год выпуска:<br />
+        Состояние устройства (отличное, хорошее, удовлетворительное):<br />
+        Комментарии:<br />
+        Прикрепленные фото
+      </p>
+      <p className="text-base text-gray-500">
+        После получения заявки, с вами свяжется наш менеджер, чтобы согласовать условия и оформить трейд-ин. Мы гарантируем выгодную оценку вашего устройства и быструю обработку заявки.
+      </p>
+      <p className="text-base text-gray-500">
+        Спасибо, что выбираете TechTrade для обновления своих устройств Apple!
+        Связывайтесь по телеграмм <a href="https://t.me/TechTradePR" className="text-blue-500">@TechTradePR</a>
+      </p>
+    </div>
+  )}
+</div>
+
+
         <div className="border-b border-gray-200 pb-4">
           <button
             className="flex items-center justify-between w-full"
@@ -180,13 +246,13 @@ const Trade = () => {
           )}
         </div>
 
-        {/* <div className="border-b border-gray-200 pb-4">
+        <div className="border-b border-gray-200 pb-4">
           <button
             className="flex items-center justify-between w-full"
             onClick={() => toggleTab(5)}
           >
             <span className="text-lg font-medium text-gray-900">
-              Can I change or cancel my order?
+              Могу ли я изменить или отменить свой заказ?
             </span>
             {activeTab === 5 ? (
               <svg
@@ -228,7 +294,7 @@ const Trade = () => {
               </p>
             </div>
           )}
-        </div> */}
+        </div>
 
         {/* <div className="border-b border-gray-200 pb-4">
           <button

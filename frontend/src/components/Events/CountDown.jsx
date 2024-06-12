@@ -42,9 +42,16 @@ const CountDown = ({ data }) => {
       return null;
     }
 
+    const labels = {
+      days: "дней",
+      hours: "часов",
+      minutes: "минут",
+      seconds: "секунд",
+    };
+
     return (
-      <span className="text-[25px] text-[#475ad2]">
-        {timeLeft[interval]} {interval}{" "}
+      <span key={interval} className="text-[25px] text-[#475ad2]">
+        {timeLeft[interval]} {labels[interval]}{" "}
       </span>
     );
   });
@@ -54,7 +61,7 @@ const CountDown = ({ data }) => {
       {timerComponents.length ? (
         timerComponents
       ) : (
-        <span className="text-[red] text-[25px]">Time's Up</span>
+        <span className="text-[red] text-[25px]">Время вышло</span>
       )}
     </div>
   );

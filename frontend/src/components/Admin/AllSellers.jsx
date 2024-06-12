@@ -48,8 +48,8 @@ const AllSellers = () => {
       flex: 0.7,
     },
     {
-      field: "address",
-      headerName: "Seller Address",
+      field: "Адрес",
+      headerName: "Адрес продавца",
       type: "text",
       minWidth: 130,
       flex: 0.7,
